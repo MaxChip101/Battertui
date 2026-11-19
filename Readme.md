@@ -1,6 +1,6 @@
 # Battertui
 
-A lightweight TUI for viewing and switching Linux power profiles via `powerprofilectl` built with Gl and ["Bubble Tea v2"](https://charm.land/bubbletea/v2).
+A lightweight TUI for viewing and switching Linux power profiles via `powerprofilectl` built with Go and ["Bubble Tea v2"](https://charm.land/bubbletea/v2).
 
 ![`$ battertui`](images/battertui.png)
 
