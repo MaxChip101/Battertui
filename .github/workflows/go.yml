@@ -22,7 +22,13 @@ jobs:
         go-version: '1.20'
 
     - name: Build
-      run: go build -v ./...
+      run: go build -v -o bin/battertui ./src
+
+    - name: Upload build
+      uses: actions/upload-artifact@v4
+      with:
+        name: battertui
+        path: bin/battertui
 
     - name: Test
-      run: go test -v ./...
+      run: go test -v ./src
