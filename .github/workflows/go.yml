@@ -19,7 +19,10 @@ jobs:
     - name: Set up Go
       uses: actions/setup-go@v4
       with:
-        go-version: '1.20'
+        go-version: '1.23'
+
+    - name: Test
+      run: go test -v ./src
 
     - name: Build
       run: go build -v -o bin/battertui ./src
@@ -30,5 +33,4 @@ jobs:
         name: battertui
         path: bin/battertui
 
-    - name: Test
-      run: go test -v ./src
+    
