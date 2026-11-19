@@ -23,12 +23,13 @@
             pname = "battertui";
             version = "0.1.0";
 
-            src = ./src/;
+            src = ./.;
 
-            vendorHash = null;
+            vendorHash = "sha256-iwcxogqbqQ9Vt5qOqc0rwQZOhYpioREYBmQcGr0fJQ0=";
 
             nativeBuildInputs = [ pkgs.makeWrapper ];
             postInstall = ''
+              mv $out/bin/src $out/bin/battertui
               wrapProgram $out/bin/battertui \
                 --prefix PATH : ${pkgs.lib.makeBinPath [ pkgs.power-profiles-daemon ]}
             '';
